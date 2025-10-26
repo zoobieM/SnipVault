@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | SnipVault</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0;
+            line-height: 1;
+        }
+        .error-title {
+            font-size: 32px;
+            margin: 20px 0;
+            color: var(--text);
+        }
+        .error-message {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 40px;
+        }
+        .error-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 SnipVault</h1>
+        </header>
+
+        <div class="error-container">
+            <div class="error-emoji">🔍</div>
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-message">
+                Oops! The page you're looking for doesn't exist.<br>
+                It might have been moved or deleted.
+            </p>
+            <a href="{{ url_for('home') }}" class="btn btn-primary">🏠 Go Back Home</a>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ | SnipVault v1.0</p>
+        </footer>
+    </div>
+</body>
+</html>
